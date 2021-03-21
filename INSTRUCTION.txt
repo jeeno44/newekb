@@ -1,0 +1,59 @@
+Проект выполнен на фреймворке Laravel-8
+Инструкция по установке приложения
+
+Рекомендуется установка приложения в UNIX - подобных операционных системах,
+таких как Linux,MacOS,FreeBSD
+
+необходимые инструменты для установки
+PHP7.4 (именно в этой версии устанвливался проект)
+        расширения для php:
+        php7.4
+        php7.4-common
+        php7.4-cli
+        php7.4-fpm
+        php7.4-gd
+        php7.4-mysql
+        php7.4-mbstring
+        php7.4-curl
+        php7.4-xml
+        php7.4-zip
+        php7.4-json
+        php7.4-imagick
+        php7.4-xmlrpc
+        php7.4-bz2
+        php7.4-dev
+        php7.4-opcache
+Composer
+Mysql-8
+git
+
+Откройте терминал
+
+1) Зайдите в папку где будет установлен проект
+    cd ~/projects/
+2) выполните команду установив проект с github-а:
+    git clone https://github.com/jeeno44/newekb
+3) зайдите в папку ./newekb
+    cd ~/projects/newekb
+    или
+    cd ./newekb
+4) выполните команду для установки фреймворка:
+    composer update
+5) скопируйте файл .env.example и настройте файл конфигурации
+
+    cp .env.example .env
+
+    DB_CONNECTION=mysql
+    DB_HOST=127.0.0.1
+    DB_PORT=3306
+    DB_DATABASE=newekb
+    DB_USERNAME=root
+    DB_PASSWORD=password
+
+6) установите новый ключ приложения командой:
+    php artisan key:generate
+7) войдите на сервер mysql и создайте новую базу данных командой:
+    CREATE DATABASE newekb;
+8) выполните миграции командой:
+    php artisan migrate
+9) Откройте файл routes/api.php в нём подробная инструкция по методам api

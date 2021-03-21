@@ -57,3 +57,6 @@ git
 8) выполните миграции командой:
     php artisan migrate
 9) Откройте файл routes/api.php в нём подробная инструкция по методам api
+10) Запустите встроенный в Laravel php сервер командой:
+    php artisan serve
+11) Подробное описание api записано в файле routes/api.php
